@@ -3,8 +3,6 @@ import { RouterLink, RouterView } from "vue-router";
 import Navbar from "./components/Navbar.vue";
 import Modal from "./components/Modal.vue";
 import Footer from "./components/Footer.vue";
-import main.js;
-
 </script>
 
 <template>
