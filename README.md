@@ -1,7 +1,9 @@
 # Vue3購物車網站應用 #  
 
 這是一個以Vue3建制中的購物網站專題製作，使用Vue Router進行單頁式應用(SPA)呈現，使用Pinia搭配json檔案進行內容來源及狀態管理。  
-主要功能包括：    
+  
+主要功能及Todos包括：    
+  
 ~~所有商品展示~~  
 ~~商品分類展示~~  
 ~~商品頁~~  
@@ -25,7 +27,9 @@ http://tsaochun.byethost7.com
 # Ecommerce website #
 
 This is a ecommerce shopping cart website project, using Vue3 as frontend framework, using Vue Router to achieve single page application effect, using Pinia and a json file for state management and content resource,  
-main functions adn Todos are:   
+  
+main functions and Todos are:   
+  
 ~~products display~~  
 ~~categories display~~   
 ~~single product display~~  
