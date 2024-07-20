@@ -39,7 +39,6 @@
                 <img :src="`/images/product_images/${i.img_file}`" alt="">
               </swiper-slide>
             </swiper>
-            <!-- <img :src="`../images/products_images/${product.img[0]['img_file']}`" alt="" /> -->
           </div>
         </div>
         <div class="col-12 col-lg-6">
