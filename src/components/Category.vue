@@ -3,19 +3,11 @@
     <div class="container px-5 text-center" py-5>
       <h3 class="my-5 movable slideIn">CATEGORY</h3>
       <div class="row my-3" v-if=" productsByCategory.length > 0">
-        <!-- <div
-          class="card col-sm-12 col-md-6 col-lg-3 border-0 gx-5 gy-5 movable slideIn"
-          v-for="item in productsByCategory" 
-          :key="item.p_id"
-        
-        > -->
         <div
           class="card col-sm-12 col-md-6 col-lg-3 border-0 gx-5 gy-5"
-
           v-for="item in productsByCategory" 
           :key="item.p_id"
         >
-        
           <div class="card-image">
             <div class="card-modal" style="z-index: 1">
               <p>

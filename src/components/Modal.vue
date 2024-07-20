@@ -109,15 +109,6 @@
             >
               Sign Up
             </button>
-            <!-- <button
-              class="btn btn-dark"
-              data-bs-target="#exampleModalToggle"
-              data-bs-toggle="modal"
-              data-bs-dismiss="modal"
-              @click="signUp"
-            >
-              Sign Up
-            </button> -->
           </div>
         </div>
       </div>
