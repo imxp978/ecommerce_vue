@@ -1,1 +1,0 @@
-import{c as o,o as r}from"./index-CgxhkWzq.js";import{_ as t}from"./Products-D9USrPf2.js";import"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js";import"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";const i={__name:"CategoryView",setup(e){return(a,_)=>(r(),o(t))}};export{i as default};
