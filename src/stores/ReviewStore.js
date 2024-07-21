@@ -5,7 +5,7 @@ import axios from 'axios';
 export const useReviewStore = defineStore('Review', () => {
   const reviews = ref([]);
   
-  let url = 'http://localhost:8888/git-files/frontend/ecommerce/';
+  let url = 'http://localhost:8888/git-files/frontend/ecommerce';
   url = '.';
 
   async function getReview () {

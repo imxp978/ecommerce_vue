@@ -7,6 +7,7 @@
 
         <swiper
           :modules="modules"
+          class="mySwiper"
           :slides-per-view="5"
           :space-between="50"
           loop
@@ -14,7 +15,30 @@
             delay: 1000,
             disableOnInteraction: false,
           }"
+         :breakpoints="{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10
+            },
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 50
+            }
+          }"
         >
+          <swiper-slide>Placeholder1</swiper-slide>
           <swiper-slide 
             v-for="item in store.reviews"
             :key="item.id">
@@ -43,8 +67,8 @@
               </div>
             </div>
           </swiper-slide>
-          <swiper-slide>Placeholder1</swiper-slide>
           <swiper-slide>Placeholder2</swiper-slide>
+          <swiper-slide>Placeholder3</swiper-slide>
         </swiper>
       </div>
       <hr/>
@@ -68,8 +92,29 @@ onMounted(async () => {
   import 'swiper/css/navigation';
   import 'swiper/css/pagination';
 
-  const modules= [Autoplay, A11y];
+  const modules= [ Autoplay, A11y];
 
 </script>
 
-<style></style>
+<style scoped>
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+</style>
