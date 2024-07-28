@@ -4,7 +4,7 @@
         <h3 class="my-5 movable slideIn">PRODUCTS</h3>
         <div class="row my-3">
           <div
-            class="card col-sm-12 col-md-6 col-lg-3 border-0 gx-5 gy-5 "
+            class="card col-sm-12 col-md-6 col-lg-3 border-0 gx-5 gy-5 movable slideIn "
             v-for="item in store.products"
             :key="item.p_id"
           >

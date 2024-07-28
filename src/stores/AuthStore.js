@@ -18,7 +18,7 @@ export const useAuthStore = defineStore('Auth', () => {
 
     try {
       // const response = await axios.post(`${url}controllers/login.php`, {
-      const response = await axios.post('http://tsaochun.byethost7.com/controllers/login.php', {
+      const response = await axios.post('https://ecommerce.work.tsaochun.com/controllers/login.php', {
         username : userName.value,
         password : passWord.value,
       }, {

@@ -122,7 +122,7 @@ const product = ref('');
 
 onMounted(() => {
   const computedProduct = productStore.getProductById(productId.value);
-  product.value = computedProduct.value;  
+  product.value = computedProduct;  
   // console.log('product: ', product.value);
 });
 

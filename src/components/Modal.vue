@@ -1,6 +1,6 @@
 <template>
   <section id="modal">
-<!-- member -->
+<!-- login -->
     <div
       class="modal fade"
       id="login"
@@ -67,6 +67,7 @@
         </div>
       </div>
     </div>
+    <!-- sign up -->
     <div
       class="modal fade"
       id="exampleModalToggle2"
@@ -223,7 +224,7 @@ async function signUp() {
       // console.log(newPassword1.value)
       try {
         // const response = await axios.post(`${url}/controllers/signUp.php`, {
-        const response = await axios.post('http://tsaochun.byethost7.com/controllers/signUp.php', {
+        const response = await axios.post('https://ecommerce.work.tsaochun.com/controllers/signUp.php', {
             email:newEmail.value,
             password: newPassword1.value,
         },{

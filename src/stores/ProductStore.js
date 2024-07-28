@@ -12,7 +12,7 @@ export const useProductStore = defineStore('Product', () => {
   async function getProducts () {
     try {
       // const response = await axios.get(`${url}/controllers/getProducts.php`);
-      const response = await axios.get('http://tsaochun.byethost7.com/controllers/getProducts.php');
+      const response = await axios.get(`https://ecommerce.work.tsaochun.com/controllers/getProducts.php`);
       if (response.data.success) {
         products.value = response.data.products;
         // console.log(response.data.products)
@@ -26,9 +26,12 @@ export const useProductStore = defineStore('Product', () => {
   }
   
   const getProductById = (id) => {
-    return computed(() => products.value.find((item) => item.p_id === id));
+    // return computed(() => products.value.find((item) => item.p_id === id));
+    const productById  = products.value.find((item) => item.p_id == id);
+    // console.log('productbyid: ',productById)
+    return productById;
   };
-  
+
   const getProductsByCategory = (id) => {
     const productsByCategory = products.value.filter((item)=> item.classid == id);
     // console.log('products.value: ',products.value);

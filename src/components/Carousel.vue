@@ -3,7 +3,7 @@
     <div class="container">
       <div
         id="carouselExampleCaptions"
-        class="carousel slide"
+        class="carousel slide movable slideIn"
         data-bs-ride="carousel"
       >
         <div class="carousel-indicators">

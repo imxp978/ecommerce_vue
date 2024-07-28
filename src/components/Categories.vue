@@ -4,7 +4,7 @@
       <h3 class="my-5 movable slideIn">CATEGORIES</h3>
       <div class="row my-3">
         <div
-          class="card col-sm-12 col-md-6 col-lg-4 border-0 gx-5 gy-5 "
+          class="card col-sm-12 col-md-6 col-lg-4 border-0 gx-5 gy-5 movable slideIn"
           v-for="item in categories"
           :key="item.classid"
         >
