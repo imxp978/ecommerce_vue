@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Stopwatch</title>
+  <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    button {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root" class="container"></div>
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    function Stopwatch() {
+      const [time, setTime] = useState(0);
+      const [running, setRunning] = useState(false);
+
+      useEffect(() => {
+        let interval;
+        if (running) {
+          interval = setInterval(() => {
+            setTime(prevTime => prevTime + 10);
+          }, 10);
+        } else if (!running) {
+          clearInterval(interval);
+        }
+        return () => clearInterval(interval);
+      }, [running]);
+
+      return (
+        <div>
+          <h1>Stopwatch</h1>
+          <div>
+            <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
+            <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}.</span>
+            <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
+          </div>
+          <div className="buttons">
+            <button onClick={() => setRunning(true)}>Start</button>
+            <button onClick={() => setRunning(false)}>Stop</button>
+            <button onClick={() => setTime(0)}>Reset</button>
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<Stopwatch />, document.getElementById('root'));
+  </script>
+</body>
+</html>
